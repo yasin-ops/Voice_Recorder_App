@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecorderFragment"
+    android:weightSum="5"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtRecordStatus"
+            android:gravity="center"
+            android:textSize="32dp"
+            android:layout_marginTop="20dp"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gifView"
+            android:src="@drawable/radio"
+            android:visibility="gone"/>
+<Chronometer
+    android:id="@+id/timeRec"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:textSize="30sp"
+    android:textColor="@color/white"
+    android:layout_margin="20dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:layout_weight="2"
+         android:weightSum="2"
+        android:orientation="vertical">
+<ImageButton
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:id="@+id/btnRecord"
+    android:background="@drawable/round_btn"
+    android:src="@drawable/ic_record"
+    android:scaleType="center"
+    android:layout_weight="0.0"
+
+    android:layout_margin="15dp"/>
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            android:layout_weight="2"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
